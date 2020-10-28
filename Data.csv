@@ -1,0 +1,68 @@
+﻿Semester,SubjectCode,Title
+1,ITC1013,Mathematics (I)
+1,ITC1023,Physics for Technology
+1,ITC1032,Principles of Statistics
+1,ITC1082,Communication skills (I)/English
+1,ITC1091,Ethical Conduct of Learners*
+1,ITC1042,Computer Systems Organization
+1,ITC1052,Software Engineering
+1,ITC1062,Fundamentals of Programming
+1,ITC1071,Programming Laboratory 
+2,ITC1102,Mathematics (II)
+2,ITC1112,Statistical Methods
+2,ITC1172,Communication skills (II)/English
+2,ITC1181,Personality Development*
+2,ITC1132,Object Oriented Programming
+2,ITC1141,Object Oriented Programming Laboratory
+2,ITC1153,Object Oriented Analysis & Design
+2,ITC1163,Database Management Systems (I)
+3,ITC2192,Mathematics for ICT  (I)
+3,ITC2202,Computer Architecture
+3,ITC2212,Data Structures and Algorithms
+3,ITC2243,Networking Essentials
+3,ITC2342,Fundamentals of Multimedia
+3,ITC2292,Digital Control Systems Technology
+3,ITC2272,Operating Systems
+4,ITC2242,Economics & Financial Management
+4,ITC2303,Visual Application Programming
+4,ITC2252,Introduction to Machine Learning
+4,ITC2282,Advanced Data Structures & Algorithms
+4,ITC2223,Web Application Development
+4,ITC2302,Network Systems Design
+4,ITC2353,Introduction to Graphic Design
+5,ITC3071,Professional Ethics
+5,ITC3013,Service Oriented Architecture & Web Services
+5,ITC3023,Human Computer Interaction
+5,ITC3032,Literature Study & Presentation
+5,ITS3043/ITN3043,Database Systems (II)
+5,ITN3052,Advanced Networking
+5,ITN3132,Wireless Communication
+5,ITM3062,Audio Production Techniques
+5,ITM3052,Video Production Techniques
+5,ITM3072,Gaming Technology
+5,ITS3052,Software Design
+5,ITM3232,Image Processing
+5,ITC3052,Project Management
+6,ITC3082,Research Methods & Technical Writing
+6,ITC3093,Principles of Computer Security
+6,ITS3102/ITN3102,System Administration
+6,ITC3113,Software Quality Assurance
+6,ITC3122,Mobile Application Development 
+6,ITN3152,Advanced Mobile Technologies
+6,ITN3162,Distributed Networks
+6,ITM3132,3D Modeling
+6,ITM3142,Digital Marketing
+6,ITS3142,Software Deployment & Evolution
+6,ITS3173,Data Mining & Warehousing
+7,ITC4156,Industrial Training / Internship 
+7,ITC4166,Research Project 
+8,ITC4172,Entrepreneurship and Small Business Management
+8,ITC4166,Research Project (Continued)
+8,ITC4182,Professional Practices in ICT
+8,ITC4212,Information Systems Strategy & IT Governance
+8,ITS4202,Emerging Technologies
+8,ITS4243,Microservices and Cloud Computing 
+8,ITN4252,Advanced Topics in Networking
+8,ITN4273,Network Security
+8,ITM4213,Immersive Technologies
+8,ITM4282,Animation Technology

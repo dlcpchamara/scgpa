@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>GPA Calculator</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.csv.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+
+
+    </head>
+<body>
+        <script type="text/javascript" src="Main.js"></script>
+ 
+<p><em><strong> SGPA / CGPA Calculation for Students in ICT Department</strong></em></p>
+<form id="CompleteForm">
+<!-----------------------------start--of--Semester 1 ---------------------------------------------------->
+<div id="gpaCalc" class="js-gpaCalc">
+    <p>Semester 1</p>
+  <table border="0" cellpadding="0" cellspacing="0" class="center" id="GPACalcTable" class="js-gpaCalc " summary="Current Credits">
+    <tbody>
+      <tr>
+        <th width="44">Subject Code</th>
+        <th width="44">Subject Name</th>
+        <th width="89">Credits</th>
+        <th width="55">Anticipated<br /> Grade</th>
+      </tr>
+
+      <tr><!--Subject 1 -->
+        <td align="center">
+            <select class="SubjectCode1_Sem1" id="SubjectCode1_Sem1" name="SubjectSubjectCode1_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+            <label id="subjectName1_Sem1" type="text" disabled></label>
+        </td>   
+        <td align="center"><input value="0" id="credits1_Sem1" class="js-gpaCalc" name="credits1_Sem1" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td>
+            <select disabled="disabled" id="grade1_Sem1" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+            </select>
+        </td>
+      </tr>
+
+      <tr><!--Subject 2 -->
+        <td align="center">
+            <select id="SubjectCode2_Sem1" name="SubjectCode2_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName2_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" id="credits2_Sem1" class="js-gpaCalc" name="credits2_Sem1" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" id="grade2_Sem1" class="js-gpaCalc" name="grade2_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+            </select></td>
+      </tr>
+
+      <tr><!--Subject 3 -->
+        <td align="center">
+            <select id="SubjectCode3_Sem1" name="SubjectCode3_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName3_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem1" name="credits3_Sem1" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem1" name="grade3_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 4 -->
+        <td align="center">
+            <select id="SubjectCode4_Sem1" name="SubjectCode4_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName4_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem1" name="credits4_Sem1" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem1" name="grade4_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 5 -->
+        <td align="center">
+            <select id="SubjectCode5_Sem1" name="SubjectCode5_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName5_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem1" name="credits5_Sem1" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem1" name="grade5_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 6 -->
+        <td align="center">
+            <select id="SubjectCode6_Sem1" name="SubjectCode6_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName6_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem1" name="credits4_Sem1" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem1" name="grade6_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 7 -->
+        <td align="center">
+            <select id="SubjectCode7_Sem1" name="SubjectCode7_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName7_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem1" name="credits7_Sem1" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem1" name="grade4_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 8 -->
+        <td align="center">
+            <select id="SubjectCode8_Sem1" name="SubjectCode8_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName8_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem1" name="credits8_Sem1" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem1" name="grade8_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+
+      <tr><!--Subject 9 -->
+        <td align="center">
+            <select id="SubjectCode9_Sem1" name="SubjectCode9_Sem1" style="font-size: 11px; width: 120px; height: 16px;">
+            </select>   
+        </td>
+        <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+            <label id="subjectName9_Sem1" ></label>
+        </td>
+        <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem1" name="credits4_Sem1" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+        <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem1" name="grade9_Sem1" style="font-size: 11px; width: 44px; height: 16px;">
+          <option selected="selected" value="0">-</option>
+          <option value="4.0">A+</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>          
+          <option value="1.0">D</option>
+          <option value="0">E</option>
+                                </select></td>
+      </tr>
+    </tbody>
+  </table>  
+  <h3>Semester 1 GPA = <input id="Semester1GPA" class="js-gpaCalc" name="local_cum_comprate"  readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+</div>
+  <!-----------------------------------------end--of--Semester 1 ---------------------------------------->
+
+ <br>
+
+  <!-----------------------------start--of--Semester 2 -------------------------------------------------->
+  <form class="form-inline">
+    <label>Semester 2</label> <input type="checkbox" id="semester2checkbox" onchange="valueChangedSem2_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable2">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem2" id="SubjectCode1_Sem2" name="SubjectSubjectCode1_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem2" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem2" class="js-gpaCalc" name="credits1_Sem2" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem2" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem2" name="SubjectCode2_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem2" class="js-gpaCalc" name="credits2_Sem2" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem2" class="js-gpaCalc" name="grade2_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem2" name="SubjectCode3_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem2" name="credits3_Sem2" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem2" name="grade3_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem2" name="SubjectCode4_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem2" name="credits4_Sem2" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem2" name="grade4_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem2" name="SubjectCode5_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem2" name="credits5_Sem2" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem2" name="grade5_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem2" name="SubjectCode6_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem2" name="credits6_Sem2" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem2" name="grade6_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem2" name="SubjectCode7_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem2" name="credits7_Sem2" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem2" name="grade7_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem2" name="SubjectCode8_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem2" name="credits8_Sem2" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem2" name="grade8_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem2" name="SubjectCode9_Sem2" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem2" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem2" name="credits9_Sem2" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem2" name="grade9_Sem2" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+        </tbody>
+      
+      </table> 
+      <h3>Semester 2 GPA = <input id="Semester2GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+ <!-----------------------------end--of--Semester 2 ----------------------------------------------------->
+
+ <br>
+
+<!-----------------------------start--of--Semester 3 --------------------------------------------------->
+   <form class="form-inline">
+    <label>Semester 3</label> <input type="checkbox" id="semester3checkbox" onchange="valueChangedSem3_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable3">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem3" id="SubjectCode1_Sem3" name="SubjectSubjectCode1_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem3" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem3" class="js-gpaCalc" name="credits1_Sem3" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem3" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                                        <option selected="selected" value="0">-</option>
+                                        <option value="4.0">A+</option>
+                                        <option value="4.0">A</option>
+                                        <option value="3.7">A-</option>
+                                        <option value="3.3">B+</option>
+                                        <option value="3.0">B</option>
+                                        <option value="2.7">B-</option>
+                                        <option value="2.3">C+</option>
+                                        <option value="2.0">C</option>
+                                        <option value="1.7">C-</option>
+                                        <option value="1.3">D+</option>          
+                                        <option value="1.0">D</option>
+                                        <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem3" name="SubjectCode2_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem3" class="js-gpaCalc" name="credits2_Sem3" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem3" class="js-gpaCalc" name="grade2_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem3" name="SubjectCode3_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem3" name="credits3_Sem3" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem3" name="grade3_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem3" name="SubjectCode4_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem3" name="credits4_Sem3" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem3" name="grade4_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+                           <option selected="selected" value="0">-</option>
+                           <option value="4.0">A+</option>
+                           <option value="4.0">A</option>
+                           <option value="3.7">A-</option>
+                           <option value="3.3">B+</option>
+                           <option value="3.0">B</option>
+                           <option value="2.7">B-</option>
+                           <option value="2.3">C+</option>
+                           <option value="2.0">C</option>
+                           <option value="1.7">C-</option>
+                           <option value="1.3">D+</option>          
+                           <option value="1.0">D</option>
+                           <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem3" name="SubjectCode5_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem3" name="credits5_Sem3" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem3" name="grade5_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem3" name="SubjectCode6_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem3" name="credits6_Sem3" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem3" name="grade6_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem3" name="SubjectCode7_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem3" name="credits7_Sem3" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem3" name="grade7_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem3" name="SubjectCode8_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem3" name="credits8_Sem3" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem3" name="grade8_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem3" name="SubjectCode9_Sem3" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem3" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem3" name="credits9_Sem3" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem3" name="grade9_Sem3" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+        </tbody>
+      
+      </table> 
+      <h3>Semester 3 GPA = <input id="Semester3GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+<!-----------------------------end--of--Semester 3 ------------------------------------------------------->
+ <br>
+
+
+
+<!-----------------------------start--of--Semester 4 ------------------------------------------------------>
+   <form class="form-inline">
+    <label>Semester 4</label> <input type="checkbox" id="semester4checkbox" onchange="valueChangedSem4_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable4">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem4" id="SubjectCode1_Sem4" name="SubjectSubjectCode1_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem4" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem4" class="js-gpaCalc" name="credits1_Sem4" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem4" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem4" name="SubjectCode2_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem4" class="js-gpaCalc" name="credits2_Sem4" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem4" class="js-gpaCalc" name="grade2_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+                      <option selected="selected" value="0">-</option>
+                      <option value="4.0">A+</option>
+                      <option value="4.0">A</option>
+                      <option value="3.7">A-</option>
+                      <option value="3.3">B+</option>
+                      <option value="3.0">B</option>
+                      <option value="2.7">B-</option>
+                      <option value="2.3">C+</option>
+                      <option value="2.0">C</option>
+                      <option value="1.7">C-</option>
+                      <option value="1.3">D+</option>          
+                      <option value="1.0">D</option>
+                      <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem4" name="SubjectCode3_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem4" name="credits3_Sem4" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem4" name="grade3_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+                          <option selected="selected" value="0">-</option>
+                          <option value="4.0">A+</option>
+                          <option value="4.0">A</option>
+                          <option value="3.7">A-</option>
+                          <option value="3.3">B+</option>
+                          <option value="3.0">B</option>
+                          <option value="2.7">B-</option>
+                          <option value="2.3">C+</option>
+                          <option value="2.0">C</option>
+                          <option value="1.7">C-</option>
+                          <option value="1.3">D+</option>          
+                          <option value="1.0">D</option>
+                          <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem4" name="SubjectCode4_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem4" name="credits4_Sem4" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem4" name="grade4_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+                           <option selected="selected" value="0">-</option>
+                           <option value="4.0">A+</option>
+                           <option value="4.0">A</option>
+                           <option value="3.7">A-</option>
+                           <option value="3.3">B+</option>
+                           <option value="3.0">B</option>
+                           <option value="2.7">B-</option>
+                           <option value="2.3">C+</option>
+                           <option value="2.0">C</option>
+                           <option value="1.7">C-</option>
+                           <option value="1.3">D+</option>          
+                           <option value="1.0">D</option>
+                           <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem4" name="SubjectCode5_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem4" name="credits5_Sem4" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem4" name="grade5_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem4" name="SubjectCode6_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem4" name="credits6_Sem4" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem4" name="grade6_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem4" name="SubjectCode7_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem4" name="credits7_Sem4" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem4" name="grade7_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem4" name="SubjectCode8_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem4" name="credits8_Sem4" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem4" name="grade8_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem4" name="SubjectCode9_Sem4" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem4" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem4" name="credits9_Sem4" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem4" name="grade9_Sem4" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+        </tbody>
+      
+      </table> 
+      <h3>Semester 4 GPA = <input id="Semester4GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+ <!-----------------------------end--of--Semester 4 -------------------------------------------------------->
+ <br>
+
+
+   <!-----------------------------start--of--Semester 5 --------------------------------------------------->
+   <form class="form-inline">
+    <label>Semester 5</label> <input type="checkbox" id="semester5checkbox" onchange="valueChangedSem5_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable5">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem5" id="SubjectCode1_Sem5" name="SubjectSubjectCode1_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem5" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem5" class="js-gpaCalc" name="credits1_Sem5" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem5" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem5" name="SubjectCode2_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem5" class="js-gpaCalc" name="credits2_Sem5" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem5" class="js-gpaCalc" name="grade2_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+                       <option selected="selected" value="0">-</option>
+                       <option value="4.0">A+</option>
+                       <option value="4.0">A</option>
+                       <option value="3.7">A-</option>
+                       <option value="3.3">B+</option>
+                       <option value="3.0">B</option>
+                       <option value="2.7">B-</option>
+                       <option value="2.3">C+</option>
+                       <option value="2.0">C</option>
+                       <option value="1.7">C-</option>
+                       <option value="1.3">D+</option>          
+                       <option value="1.0">D</option>
+                       <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem5" name="SubjectCode3_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem5" name="credits3_Sem5" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+              <select class="js-gpaCalc " disabled="disabled" id="grade3_Sem5" name="grade3_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+                              <option selected="selected" value="0">-</option>
+                              <option value="4.0">A+</option>
+                              <option value="4.0">A</option>
+                              <option value="3.7">A-</option>
+                              <option value="3.3">B+</option>
+                              <option value="3.0">B</option>
+                              <option value="2.7">B-</option>
+                              <option value="2.3">C+</option>
+                              <option value="2.0">C</option>
+                              <option value="1.7">C-</option>
+                              <option value="1.3">D+</option>          
+                              <option value="1.0">D</option>
+                              <option value="0">E</option>
+              </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem5" name="SubjectCode4_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem5" name="credits4_Sem5" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem5" name="grade4_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+                                  <option selected="selected" value="0">-</option>
+                                  <option value="4.0">A+</option>
+                                  <option value="4.0">A</option>
+                                  <option value="3.7">A-</option>
+                                  <option value="3.3">B+</option>
+                                  <option value="3.0">B</option>
+                                  <option value="2.7">B-</option>
+                                  <option value="2.3">C+</option>
+                                  <option value="2.0">C</option>
+                                  <option value="1.7">C-</option>
+                                  <option value="1.3">D+</option>          
+                                  <option value="1.0">D</option>
+                                  <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem5" name="SubjectCode5_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem5" name="credits5_Sem5" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem5" name="grade5_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem5" name="SubjectCode6_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem5" name="credits6_Sem5" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem5" name="grade6_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem5" name="SubjectCode7_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem5" name="credits7_Sem5" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem5" name="grade7_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem5" name="SubjectCode8_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem5" name="credits8_Sem5" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem5" name="grade8_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem5" name="SubjectCode9_Sem5" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem5" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem5" name="credits9_Sem5" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem5" name="grade9_Sem5" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          
+        </tbody>
+      
+      </table> 
+      <h3>Semester 5 GPA = <input id="Semester5GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+ <!-----------------------------end--of--Semester 5 ------------------------------------------------------>
+ <br>
+
+
+ 
+   <!-----------------------------start--of--Semester 6 --------------------------------------------------->
+   <form class="form-inline">
+    <label>Semester 6</label> <input type="checkbox" id="semester6checkbox" onchange="valueChangedSem6_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable6">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem6" id="SubjectCode1_Sem6" name="SubjectSubjectCode1_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem6" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem6" class="js-gpaCalc" name="credits1_Sem6" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem6" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem6" name="SubjectCode2_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem6" class="js-gpaCalc" name="credits2_Sem6" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem6" class="js-gpaCalc" name="grade2_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+                             <option selected="selected" value="0">-</option>
+                             <option value="4.0">A+</option>
+                             <option value="4.0">A</option>
+                             <option value="3.7">A-</option>
+                             <option value="3.3">B+</option>
+                             <option value="3.0">B</option>
+                             <option value="2.7">B-</option>
+                             <option value="2.3">C+</option>
+                             <option value="2.0">C</option>
+                             <option value="1.7">C-</option>
+                             <option value="1.3">D+</option>          
+                             <option value="1.0">D</option>
+                             <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem6" name="SubjectCode3_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem6" name="credits3_Sem6" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem6" name="grade3_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+                          <option selected="selected" value="0">-</option>
+                          <option value="4.0">A+</option>
+                          <option value="4.0">A</option>
+                          <option value="3.7">A-</option>
+                          <option value="3.3">B+</option>
+                          <option value="3.0">B</option>
+                          <option value="2.7">B-</option>
+                          <option value="2.3">C+</option>
+                          <option value="2.0">C</option>
+                          <option value="1.7">C-</option>
+                          <option value="1.3">D+</option>          
+                          <option value="1.0">D</option>
+                          <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem6" name="SubjectCode4_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem6" name="credits4_Sem6" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem6" name="grade4_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem6" name="SubjectCode5_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem6" name="credits5_Sem6" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem6" name="grade5_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem6" name="SubjectCode6_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem6" name="credits6_Sem6" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem6" name="grade6_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem6" name="SubjectCode7_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem6" name="credits7_Sem6" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem6" name="grade7_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem6" name="SubjectCode8_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem6" name="credits8_Sem6" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem6" name="grade8_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem6" name="SubjectCode9_Sem6" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem6" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem6" name="credits9_Sem6" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem6" name="grade9_Sem6" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+        </tbody>
+      
+      </table> 
+      <h3>Semester 6 GPA = <input id="Semester6GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+ <!-----------------------------end--of--Semester 6 ------------------------------------------------------>
+
+
+<br>
+
+
+<!-----------------------------start--of--Semester 7 ------------------------------------------------------>
+  <form class="form-inline">
+    <label>Semester 7</label> <input type="checkbox" id="semester7checkbox" onchange="valueChangedSem7_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable7">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem7" id="SubjectCode1_Sem7" name="SubjectSubjectCode1_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem7" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem7" class="js-gpaCalc" name="credits1_Sem7" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem7" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem7" name="SubjectCode2_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem7" class="js-gpaCalc" name="credits2_Sem7" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem7" class="js-gpaCalc" name="grade2_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>   
+
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem7" name="SubjectCode3_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem7" name="credits3_Sem7" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem7" name="grade3_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem7" name="SubjectCode4_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem7" name="credits4_Sem7" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem7" name="grade4_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem7" name="SubjectCode5_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem7" name="credits5_Sem7" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem7" name="grade5_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem7" name="SubjectCode6_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem7" name="credits6_Sem7" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem7" name="grade6_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem7" name="SubjectCode7_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem7" name="credits7_Sem7" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem7" name="grade7_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem7" name="SubjectCode8_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem7" name="credits8_Sem7" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem7" name="grade8_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem7" name="SubjectCode9_Sem7" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem7" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem7" name="credits9_Sem7" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem7" name="grade9_Sem7" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+        </tbody>
+      
+      </table> 
+      <h3>Semester 7 GPA = <input id="Semester7GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+<!-----------------------------end--of--Semester 7 --------------------------------------------------------->
+
+ <br>
+
+<!-----------------------------start--of--Semester 8 ------------------------------------------------------->
+   <form class="form-inline">
+    <label>Semester 8</label> <input type="checkbox" id="semester8checkbox" onchange="valueChangedSem8_Checkbox()">
+  </form>
+ <div hidden id="GPACalcTable8">
+    <table  border="0" cellpadding="0" cellspacing="0" class="center"  class="js-gpaCalc " summary="Current Credits">
+        <tbody>
+          <tr>
+            <th width="44">Subject Code</th>
+            <th width="44">Subject Name</th>
+            <th width="89">Credits</th>
+            <th width="55">Anticipated<br/> Grade</th>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 1 -->
+                <select class="SubjectCode1_Sem8" id="SubjectCode1_Sem8" name="SubjectSubjectCode1_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 120px; height: 16px;">
+                <label id="subjectName1_Sem8" type="text" disabled ></label>
+            </td>   
+            <td align="center"><input value="0" id="credits1_Sem8" class="js-gpaCalc" name="credits1_Sem8" onchange="genable1();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td>
+                <select disabled="disabled" id="grade1_Sem8" name="grade1" style="font-size: 11px; width: 44px; height: 16px;">
+                  <option selected="selected" value="0">-</option>
+                  <option value="4.0">A+</option>
+                  <option value="4.0">A</option>
+                  <option value="3.7">A-</option>
+                  <option value="3.3">B+</option>
+                  <option value="3.0">B</option>
+                  <option value="2.7">B-</option>
+                  <option value="2.3">C+</option>
+                  <option value="2.0">C</option>
+                  <option value="1.7">C-</option>
+                  <option value="1.3">D+</option>          
+                  <option value="1.0">D</option>
+                  <option value="0">E</option>
+                </select>
+            </td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 2 -->
+                <select id="SubjectCode2_Sem8" name="SubjectCode2_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName2_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" id="credits2_Sem8" class="js-gpaCalc" name="credits2_Sem8" onchange="genable2();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" id="grade2_Sem8" class="js-gpaCalc" name="grade2_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+    
+          <tr>
+            <td align="center"><!--Subject 3 -->
+                <select id="SubjectCode3_Sem8" name="SubjectCode3_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName3_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits3_Sem8" name="credits3_Sem8" onchange="genable3();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select class="js-gpaCalc " disabled="disabled" id="grade3_Sem8" name="grade3_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 4 -->
+                <select id="SubjectCode4_Sem8" name="SubjectCode4_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>   
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName4_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits4_Sem8" name="credits4_Sem8" onchange="genable4();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade4_Sem8" name="grade4_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>          
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 5 -->
+                <select id="SubjectCode5_Sem8" name="SubjectCode5_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName5_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits5_Sem8" name="credits5_Sem8" onchange="genable5();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade5_Sem8" name="grade5_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 6 -->
+                <select id="SubjectCode6_Sem8" name="SubjectCode6_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName6_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits6_Sem8" name="credits6_Sem8" onchange="genable6();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade6_Sem8" name="grade6_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 7 -->
+                <select id="SubjectCode7_Sem8" name="SubjectCode7_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName7_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits7_Sem8" name="credits7_Sem8" onchange="genable7();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade7_Sem8" name="grade7_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 8 -->
+                <select id="SubjectCode8_Sem8" name="SubjectCode8_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName8_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits8_Sem8" name="credits8_Sem8" onchange="genable8();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade8_Sem8" name="grade8_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          <tr>
+            <td align="center"><!--Subject 9 -->
+                <select id="SubjectCode9_Sem8" name="SubjectCode9_Sem8" style="font-size: 11px; width: 120px; height: 16px;">
+                </select>
+            </td>
+            <td align="center" style="font-size: 11px; width: 44px; height: 16px;">
+                <label id="subjectName9_Sem8" ></label>
+            </td>
+            <td align="center"><input value="0" class="js-gpaCalc" id="credits9_Sem8" name="credits9_Sem8" onchange="genable9();" size="3" style="font-size: 11px; width: 28px; height: 14px;" type="text" /></td>
+            <td><select disabled="disabled" class="js-gpaCalc" id="grade9_Sem8" name="grade9_Sem8" style="font-size: 11px; width: 44px; height: 16px;">
+              <option selected="selected" value="0">-</option>
+              <option value="4.0">A+</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="1.7">C-</option>
+              <option value="1.3">D+</option>
+              <option value="1.0">D</option>
+              <option value="0">E</option>
+                                    </select></td>
+          </tr>
+          
+        </tbody>
+      
+      </table> 
+      <h3>Semester 8 GPA = <input id="Semester8GPA" class="" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+ </div>
+<!-----------------------------end--of--Semester 8 ----------------------------------------------------------->
+
+
+
+
+  <!-- Calculate GPA and Reset -->
+  <table border="0" cellpadding="0" cellspacing="0" id="GPACalcTable2" class="js-gpaCalc" summary="Cumulative Completion Rate">
+    <tbody>
+      <tr>
+        <td>
+          <h3>Cumulative GPA = <input id="CumulativeGPA" class="js-gpaCalc" name="local_cum_comprate" readonly="readonly" size="3" style="border: #DDDDDD 1px solid; font-size: 11px; width: 50px; font-family: verdana; font-weight: bold; height: 14px; background-color: #fafafa;" type="text" /></h3>
+        </td>
+      </tr>
+      <tr>
+        <td><input class="js-gpaCalc" id="calculateRate" name="calculateRate" onclick="CalculateSemGPA();" type="button" value="Calculate" /> &nbsp; <input class="js-gpaCalc" type="reset" value="Reset" onClick="clearForm();"></td>
+      </tr>                                                                    <!--currentcumcomplrate(); determineStatuses();-->
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+    </body>
+</html>
